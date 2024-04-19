@@ -24,13 +24,14 @@ const UserPage = ({ params }: { params: { username: string } }) => {
     ],
     replies: [{ message: "Mi respuesta", repliesCount: 0 }],
   };
+
   return (
     <main className="flex flex-col bg-gray-100 p-8">
       <section className="flex flex-col mb-8">
         <div className="rounded-full p-6 bg-gray-300 w-20 text-center">
           <span className="font-semibold text-lg">AS</span>
         </div>
-        <h2 className="font-semibold text-lg mb-1">{user.name}</h2>
+        <h2 className="mb-1">{user.name}</h2>
         <div className="text-md mb-4 text-gray-600 cursor-pointer">
           @<Link href={`/users/${user.username}`}>{user.username}</Link>
         </div>

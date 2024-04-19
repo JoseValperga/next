@@ -13,7 +13,7 @@ const Message = ({ message }: MessageProps) => {
       </div>
       <div className="flex flex-col ml-4 mt-2">
         <div className="flex">
-          <h3 className="font-semibold text-md">{message.name}</h3>
+          <h3>{message.name}</h3>
           <div className="text-md ml-2 text-gray-600 cursor-pointer">
             @<Link href={`/users/${message.username}`}>{message.username}</Link>
           </div>

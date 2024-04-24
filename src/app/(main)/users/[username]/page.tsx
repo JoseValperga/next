@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Message from "@/components/messages/Message";
-import UserTabs from "@/components/Users/UserTabs";
+import UserTabs from "@/components/users/UserTabs";
 
 const UserPage = ({ params }: { params: { username: string } }) => {
   const user = {

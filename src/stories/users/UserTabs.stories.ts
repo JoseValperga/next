@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import UserTabs from "@/components/Users/UserTabs";
+import UserTabs from "@/components/users/UserTabs";
 
 const meta = {
   title: "User/UserTabs",

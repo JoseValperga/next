@@ -1,5 +1,4 @@
 import { LinkType } from "@/types/link.types";
-//import { link } from "fs";
 import Link from "next/link";
 
 type MenuProps = {
@@ -22,7 +21,7 @@ const Menu = ({ links }: MenuProps) => {
             </li>
           ))}
       </ul>
-      <button className="button-primary">Postear</button>
+      <button className="button-primary uppercase font-semibold">Postear</button>
     </nav>
   );
 };

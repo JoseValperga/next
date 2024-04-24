@@ -1,3 +1,4 @@
+import { title } from "process";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -14,15 +15,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        title: ["var(--font-alegreya)"],
+        body: ["var(--font-mulish)"],
+      },
     },
   },
   fontSize: {
-    xs: '14px',
-    sm: '16px',
-    md: '18px',
-    lg: '20px',
-    xl: '24px',
-    '2xl': '32px',
+    xs: "14px",
+    sm: "16px",
+    md: "18px",
+    lg: "20px",
+    xl: "24px",
+    "2xl": "32px",
   },
   plugins: [],
 };

@@ -7,6 +7,11 @@ const nextConfig = {
         hostname: "viajes.nationalgeographic.com.es",
         port: "",
         pathname: "/**",
+      },{
+        protocol: "https",
+        hostname: "i.pinimg.com",
+        port: "",
+        pathname: "/**",
       },
     ],
   },

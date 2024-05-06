@@ -17,11 +17,11 @@ const UsersLayout: FC<PropsWithChildren> = async ({ children }) => {
   return (
     <>
       <div className=" w-full h-full grid grid-cols-12 gap-4 px-4">
-        <div className="col-span-3">
+        <div className="col-span-2">
           <Menu links={LINKS} />
         </div>
         <main className="col-span-6">{children}</main>
-        <div className="col-span-3">
+        <div className="col-span-4">
           <div className="mb-4">
             <ExploreTrending hashes={hashes.content} />
           </div>

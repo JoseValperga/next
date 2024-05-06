@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PostCounter from "../counters/PostCounter";
 import { TrendingUserType } from "@/types/user.types";
+import UserCard, { UserCardLayout } from "../users/UserCard";
 
 type ExploreUsersProps = {
   user: TrendingUserType[];
@@ -17,31 +18,11 @@ const ExploreUsers = ({ user }: ExploreUsersProps) => {
       >
         <h2 className="mb-2">A quien seguir</h2>
         {user.slice(0, 4).map((user, index) => (
-          <div
+          <UserCard
+            user={user}
             key={`trending-user-${index}`}
-            className="mb-4 grid grid-cols-12"
-          >
-            <div className="w-full mt-1 text-center mb-4 block relative h-20 col-span-2 justify-between">
-              <Image
-                src={user.photoUrl}
-                priority
-                className="rounded-full"
-                width={60}
-                height={60}
-                alt="Picture of the author"
-              />
-            </div>
-
-            <div className="flex flex-col ml-4 mt-2 col-span-10">
-              <div className="flex">
-                <h3>{user.name}</h3>
-                <div className="text-md ml-2 text-gray-600 cursor-pointer">
-                  @<Link href={`/users/${user.username}`}>{user.username}</Link>
-                </div>
-              </div>
-            </div>
-            
-          </div>
+            layout={UserCardLayout.VERTICAL}
+          />
         ))}
       </div>
       {user.length > 4 && (

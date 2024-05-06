@@ -1,6 +1,6 @@
 import { PageType } from "@/types/pagination.types";
 import { MessageType } from "@/types/types.message";
-import { UserType } from "@/types/user.types";
+import { TrendingUserType, UserType } from "@/types/user.types";
 import { httpGet, httpGetPublic } from "../common/http.service";
 import { TrendingHashtag } from "@/types/hash.types";
 
@@ -10,7 +10,7 @@ class ExploreAPI {
       `/explore/trending`,
       new URLSearchParams({ page: `${page}`, size: `${size}` })
     );
-    getFollowRecommendation = async (page: number, size: number): Promise<UserType> =>
+    getFollowRecommendation = async (page: number, size: number): Promise<PageType<TrendingUserType>> =>
       httpGetPublic(
         `/explore/follow-recommendations`,
         new URLSearchParams({ page: `${page}`, size: `${size}` })

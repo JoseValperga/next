@@ -2,11 +2,10 @@ import ExploreTrending from "@/components/explore/ExploreTrending";
 import ExploreUsers from "@/components/explore/ExploreUsers";
 import Menu from "@/components/menu/Menu";
 import exploreApi from "@/services/explore/explore.service";
-import Link from "next/link";
 import { FC, PropsWithChildren } from "react";
 const LINKS = [
   { title: "Inicio", href: "/" },
-  { title: "Explorar", href: "/explorar" },
+  { title: "Explorar", href: "/explore" },
   { title: "Perfil", href: "/mi-perfil" },
 ];
 const UsersLayout: FC<PropsWithChildren> = async ({ children }) => {
@@ -20,13 +19,16 @@ const UsersLayout: FC<PropsWithChildren> = async ({ children }) => {
         <div className="col-span-2">
           <Menu links={LINKS} />
         </div>
+      
         <main className="col-span-6">{children}</main>
+        
         <div className="col-span-4">
           <div className="mb-4">
             <ExploreTrending hashes={hashes.content} />
           </div>
           <ExploreUsers user={users.content} />
         </div>
+      
       </div>
     </>
   );

@@ -24,12 +24,12 @@ const ExploreUsers = ({ user }: ExploreUsersProps) => {
             layout={UserCardLayout.VERTICAL}
           />
         ))}
+        {user.length > 4 && (
+          <Link href="/explore?type=USERS">
+            <div className=" text-center link-primary">Ver mas</div>
+          </Link>
+        )}{" "}
       </div>
-      {user.length > 4 && (
-        <Link href="/explorar?type=hash">
-          <div className=" text-center link-primary">Ver mas</div>
-        </Link>
-      )}
     </>
   );
 };
